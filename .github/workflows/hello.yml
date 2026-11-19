@@ -1,0 +1,24 @@
+
+name: My First GitHub Actions Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download my code
+        uses: actions/checkout@v4
+
+      - name: Say Hello
+        run: echo "Hello Riyaz!"
+
+      - name: Show operating system
+        run: uname -a
+
+      - name: Show project files
+        run: ls -la
